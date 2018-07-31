@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   background-position: center center;
   width: 33.3333%;
+  transition: all 800ms cubic-bezier(0.810, -0.330, 0.345, 1.375);
+  z-index: 10;
+  position: relative;
 }
 
 .card-container {
@@ -15,9 +18,9 @@ width: 100%;
 }
 
 .cocktail-link {
-  display: block;
-  height: 88%;
-  position: relative;
+  position: absolute;
+  height: 100%;
+  width: 100%;
   top: 0px;
   left: 0px;
 }

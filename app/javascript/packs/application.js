@@ -8,7 +8,7 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import 'bootstrap';
-
+import AOS from "aos";
 
 'use strict';
 
@@ -17,3 +17,5 @@ $(document).ready(function () {
         $('#sidebar').toggleClass('active');
     });
 });
+
+AOS.init();

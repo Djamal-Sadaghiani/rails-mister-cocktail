@@ -4,6 +4,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @title = "Mister Cocktail"
   end
 
   def edit
@@ -35,6 +36,12 @@ class CocktailsController < ApplicationController
 
   def show
     @dose = Dose.new
+  end
+
+  def search
+    @cocktails = Cocktail.search(params[:cocktail][:search])
+    @title = "Search for: #{params[:cocktail][:search]}"
+    render :index
   end
 
   private
