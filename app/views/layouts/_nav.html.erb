@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <!-- Sidebar Holder -->
+  <nav id="sidebar">
+      <div class="sidebar-header">
+          <h3>Mister Cocktail</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+          <p></p>
+          <li class="active">
+              <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Cocktails</a>
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                  <li>
+                      <a href="<%= cocktails_path %>">All Cocktails</a>
+                  </li>
+                  <li>
+                      <a href="#">The Classics</a>
+                  </li>
+                  <li>
+                      <a href="<%= new_cocktail_path %>">Add a new one</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ingredients</a>
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                  <li>
+                      <a href="#">All Ingredients</a>
+                  </li>
+                  <li>
+                      <a href="#">Add a new one</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </nav>
+  <div id="content">

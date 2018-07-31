@@ -1,0 +1,35 @@
+.cocktail-card {
+  height: 50vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 33.3333%;
+}
+
+.card-container {
+display: flex;
+flex-wrap: wrap;
+margin: 0px;
+padding: 0px;
+width: 100%;
+}
+
+.cocktail-link {
+  display: block;
+  height: 88%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.card-text {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  background: #ff5c68;
+  padding: 0px 5px;
+  display:inline-block;
+}

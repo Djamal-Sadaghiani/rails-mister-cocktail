@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsMisterCocktail</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+
+     <div class="wrapper">
+      <!-- Sidebar Holder -->
+      <nav id="sidebar">
+          <div class="sidebar-header">
+              <h3>Mister Cocktail</h3>
+          </div>
+
+          <ul class="list-unstyled components">
+              <p></p>
+              <li class="active">
+                  <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Cocktails</a>
+                  <ul class="collapse list-unstyled" id="homeSubmenu">
+                      <li>
+                          <a href="#">All Cocktails</a>
+                      </li>
+                      <li>
+                          <a href="#">The Classics</a>
+                      </li>
+                      <li>
+                          <a href="#">Add a new one</a>
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Ingredients</a>
+                  <ul class="collapse list-unstyled" id="pageSubmenu">
+                      <li>
+                          <a href="#">All Ingredients</a>
+                      </li>
+                      <li>
+                          <a href="#">Add a new one</a>
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+
+      </nav>
+
+  <!-- Page Content Holder -->
+  <div id="content">
+    <button type="button" id="sidebarCollapse" class="navbar-btn">
+    <i class="fas fa-align-justify"></i>
+    </button>
+
+
+    <%= yield %>
+    </div>
+    </div>
+    <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
+    <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+  </body>
+</html>

@@ -1,2 +1,26 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="banner" style="background-image: url('<%= @cocktail.image %>');">
+  <div class="banner-content">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+</div>
+
+<div class="page-content">
+  <h3>Recipe</h3>
+      <table class="table table-borderless table-hover">
+          <thead>
+            <th style="border-top: 0px; border-bottom: 0px;" scope="col">Ingredient</th>
+            <th style="border-top: 0px; border-bottom: 0px;" scope="col">Description</th>
+          </thead>
+          <tbody>
+          <% @cocktail.doses.each do |dose| %>
+            <tr>
+              <td><%= dose.ingredient.name %></td>
+              <td><%= dose.description %><%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash destroy_dose"></i></td>
+          <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+</div>

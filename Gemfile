@@ -60,5 +60,5 @@ gem 'rails-controller-testing', group: [ :test ]
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
-gem 'font-awesome-sass', '~> 5.0.9'
+gem 'font-awesome-sass'
 gem 'simple_form'
