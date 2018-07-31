@@ -66,3 +66,5 @@ gem 'simple_form'
 gem 'pg_search'
 gem 'dotenv-rails', groups: [:development, :test]
 
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
